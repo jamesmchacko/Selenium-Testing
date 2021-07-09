@@ -18,6 +18,9 @@ public class Drag_and_Drop_in_frame {
 
 		driver.get("http://jqueryui.com/droppable/");
 
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+		
 		driver.switchTo().frame(0);
 
 		Actions action = new Actions(driver);
